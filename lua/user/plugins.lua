@@ -45,6 +45,17 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
+use {
+  "folke/which-key.nvim",
+  config = function()
+    require("which-key").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
+
   use { "github/copilot.vim" }
   use { "sitiom/nvim-numbertoggle",
    config = function()
